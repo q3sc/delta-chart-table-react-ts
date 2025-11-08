@@ -1,0 +1,87 @@
+.chart-table {
+    --background-color-gray: #F5F5F5;
+    --background-color-blue: #EDF8FF;
+    --background-color-red: #FEE6E6;
+    --background-color-green: #ECF7E7;
+    
+    --text-color-gray: #252525;
+    --text-color-green: #3B8E1B;
+    --text-color-red: #FF0000;
+
+    --padding-cell: .75rem 1rem;
+    
+    width: 100%;
+    border-spacing: .4rem;
+
+    color: var(--text-color-gray);
+
+    &-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    &__header {
+        &-cell {
+            padding: var(--padding-cell);
+            background-color: var(--background-color-gray);
+            font-weight: 400;
+
+            &--2 {
+                background-color: var(--background-color-blue);
+            }
+        }
+    }
+
+    &__body {
+        &-row {
+            &:hover {
+                opacity: .7;
+            }
+            &:active {
+                filter: grayscale(.25);
+                transform: scaleY(.9) scaleX(.992);
+            }
+        }
+        &-cell {
+            padding: var(--padding-cell);
+            background-color: var(--background-color-gray);
+            text-align: right;
+
+            &--1 {
+                text-align: left;
+            }
+
+            &--2 {
+                background-color: var(--background-color-blue);
+            }
+
+            &--3 {
+                display: grid;
+                grid-template-columns: 3fr 2fr;
+                column-gap: .5rem;
+            }
+
+            &--background-color {
+                &-red {
+                    background-color: var(--background-color-red);
+                }
+
+                &-green {
+                    background-color: var(--background-color-green);
+                }
+            }
+
+            &-percent {
+                color: var(--text-color-green);
+                white-space: nowrap;
+                word-break: keep-all;
+
+                &--text-color {
+                    &-red {
+                        color: var(--text-color-red);
+                    }
+                }
+            }
+        }
+    }
+}
