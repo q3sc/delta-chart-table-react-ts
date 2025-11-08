@@ -1,9 +1,9 @@
 :root {
-  --rem: 2vw;
+  --rem: 1.8vw;
   --transition: all ease-in-out 200ms;
 
   @media (min-width: 1000px) {
-    --rem: 20px;
+    --rem: 19px;
   }
 }
 
@@ -24,6 +24,6 @@ html {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1080px;
   margin: 0 auto;
 }
