@@ -55,12 +55,6 @@
                 background-color: var(--background-color-blue);
             }
 
-            &--3 {
-                display: grid;
-                grid-template-columns: 3fr 2fr;
-                column-gap: .5rem;
-            }
-
             &--background-color {
                 &-red {
                     background-color: var(--background-color-red);
@@ -69,6 +63,12 @@
                 &-green {
                     background-color: var(--background-color-green);
                 }
+            }
+
+            &-grid {
+                display: grid;
+                grid-template-columns: 3fr 2fr;
+                column-gap: .5rem;
             }
 
             &-percent {

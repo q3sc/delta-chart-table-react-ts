@@ -82,10 +82,12 @@ const ChartTable = ({data} : ChartTableProps) => {
                                     <td className={`${blockName}__body-cell ${blockName}__body-cell--1`}>{rowData[0]}</td>
                                     <td className={`${blockName}__body-cell ${blockName}__body-cell--2`}>{rowData[1]}</td>
                                     <td className={`${blockName}__body-cell ${blockName}__body-cell--3 ${getCellBackgroundColorClassName(rowData[1], rowData[2])}`}>
-                                        {rowData[2]}
-                                        <span className={`${blockName}__body-cell-percent ${getCellPercentTextColorClassName(rowData[1], rowData[2])}`}>
-                                            <b>{percentageDiff(rowData[1], rowData[2])}</b>%
-                                        </span>
+                                        <div className={`${blockName}__body-cell-grid`}>
+                                            {rowData[2]}
+                                            <span className={`${blockName}__body-cell-percent ${getCellPercentTextColorClassName(rowData[1], rowData[2])}`}>
+                                                <b>{percentageDiff(rowData[1], rowData[2])}</b>%
+                                            </span>
+                                        </div>
                                     </td>
                                     <td className={`${blockName}__body-cell ${getCellBackgroundColorClassName(rowData[1], rowData[3])}`}>{rowData[3]}</td>
                                 </tr>
