@@ -56,6 +56,10 @@ const ChartTable = ({data} : ChartTableProps) => {
     const handleRowClick = (index: number) => {
         setSelectedRowIndex(selectedRowIndex === index ? null : index)
     }
+
+    const handleRowKeyUp = (event : KeyboardEvent, index: number) => {
+        event.key === 'Enter' && setSelectedRowIndex(selectedRowIndex === index ? null : index)
+    }
     
     return (
         <div className={`${blockName}-wrapper`}>
@@ -74,7 +78,7 @@ const ChartTable = ({data} : ChartTableProps) => {
 
                         return (
                             <React.Fragment key={index}>
-                                <tr className={`${blockName}__body-row`} tabIndex={0} key={index} onClick={() => handleRowClick(index)}>
+                                <tr className={`${blockName}__body-row`} tabIndex={0} key={index} onClick={() => handleRowClick(index)} onKeyUp={(event) => handleRowKeyUp(event, index)}>
                                     <td className={`${blockName}__body-cell ${blockName}__body-cell--1`}>{rowData[0]}</td>
                                     <td className={`${blockName}__body-cell ${blockName}__body-cell--2`}>{rowData[1]}</td>
                                     <td className={`${blockName}__body-cell ${blockName}__body-cell--3 ${getCellBackgroundColorClassName(rowData[1], rowData[2])}`}>
