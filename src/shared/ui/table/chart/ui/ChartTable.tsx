@@ -57,7 +57,7 @@ const ChartTable = ({data} : ChartTableProps) => {
         setSelectedRowIndex(selectedRowIndex === index ? null : index)
     }
 
-    const handleRowKeyUp = (event : KeyboardEvent, index: number) => {
+    const handleRowKeyUp = (event: React.KeyboardEvent<HTMLTableRowElement>, index: number) => {
         event.key === 'Enter' && setSelectedRowIndex(selectedRowIndex === index ? null : index)
     }
     
